@@ -166,3 +166,6 @@ Second part of Airbnb: Joann Vuong
 
 ## License
 Public Domain. No copy write protection. 
+
+<p align="center">
+<h2 align="center"><img align="center" src="https://github.com/elyse502/AirBnB_clone/assets/125453474/ab3c1e01-2b98-47ae-96b7-37c07c85a2f1" alt="footer" width="150"  height="150"/></h2>
