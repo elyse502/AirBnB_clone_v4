@@ -445,61 +445,75 @@ guillaume@ubuntu:~/AirBnB_v4$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 ...
 ```
 
+![b68cd1e385963da099899f51ee5f3a6bbf0adcb3](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/0635ec85-68ef-4d3c-a625-a243e9c01e53)
+![62fbb2d674fca4a843458e61cf3b05ee9f68ad04](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/5fa02094-22da-43f7-8a41-0943e9c0e632)
 
+## 4. Fetch places: [web_dynamic/3-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/3-hbnb.py), [web_dynamic/templates/3-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/3-hbnb.html), [web_dynamic/static/scripts/3-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/3-hbnb.js)
+Replace the route `2-hbnb` with `3-hbnb` in the file `3-hbnb.py` (based on `2-hbnb.py`)
 
+Create a new template `3-hbnb.html` (based on `2-hbnb.html`) and update it:
+* Import the JavaScript `static/scripts/3-hbnb.js` in the `<head>` tag (instead of `2-hbnb.js`)
+* Remove the entire Jinja section of displaying all places (all `article` tags)
 
+Write a JavaScript script (`static/scripts/3-hbnb.js`):
+* Based on `2-hbnb.js`
+* Request `http://0.0.0.0:5001/api/v1/places_search/`:
+   * Description of this endpoint [here](https://github.com/elyse502/AirBnB_clone_v3/blob/master/api/v1/views/places.py). **If this endpoint is not available, you will have to add it to the API** (you can work all together for creating this endpoint)
+   * Send a `POST` request with `Content-Type: application/json` and an empty dictionary in the body - cURL version: `curl "http://0.0.0.0:5001/api/v1/places_search" -XPOST -H "Content-Type: application/json" -d '{}'`
+   * Loop into the result of the request and create an `article` tag representing a `Place` in the `section.places`. (you can remove the Owner tag in the place description)
 
+The final result must be the same as previously, but now, places are loaded from the front-end, not from the back-end!
 
+## 5. Filter places by Amenity: [web_dynamic/4-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/4-hbnb.py), [web_dynamic/templates/4-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/4-hbnb.html), [web_dynamic/static/scripts/4-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/4-hbnb.js)
+Replace the route `3-hbnb` with `4-hbnb` in the file `4-hbnb.py` (based on `3-hbnb.py`)
 
+Create a new template `4-hbnb.html` (based on `3-hbnb.html`) and update it:
+* Import the JavaScript `static/scripts/4-hbnb.js` in the `<head>` tag (instead of `3-hbnb.js`)
 
+Write a JavaScript script (`static/scripts/4-hbnb.js`):
+* Based on `3-hbnb.js`
+* When the `button` tag is clicked, a new POST request to `places_search` should be made with the list of Amenities checked
 
+Now you have the first filter implemented, enjoy!
 
+## 6. States and Cities: [web_dynamic/100-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/100-hbnb.py), [web_dynamic/templates/100-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/100-hbnb.html), [web_dynamic/static/scripts/100-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/100-hbnb.js)
+Now, reproduce the same steps with the State and City filter:
 
+Replace the route `4-hbnb` to `100-hbnb` in the file `100-hbnb.py` (based on `4-hbnb.py`)
 
+Create a new template `100-hbnb.html` (based on `4-hbnb.html`) and update it:
+* Import the JavaScript `static/scripts/100-hbnb.js` in the `<head>` tag (instead of `4-hbnb.js`)
+* Add to all `li` tags of each state a new tag: `<input type="checkbox">`
+* Add to all `li` tags of each cities a new tag: `<input type="checkbox">`
+* The new checkbox must be at 10px on the left of the State or City name
+* Add to all `input` tags of each states (`<li>` tag) the attribute `data-id=":state_id"`
+* Add to all `input` tags of each states (`<li>` tag) the attribute `data-name=":state_name"`
+* Add to all `input` tags of each cities (`<li>` tag) the attribute `data-id=":city_id"`
+* Add to all `input` tags of each cities (`<li>` tag) the attribute `data-name=":city_name"`
 
+Write a JavaScript script (`static/scripts/100-hbnb.js`):
+* Based on `4-hbnb.js`
+   * Listen to changes on each `input` checkbox tag:
+   * if the checkbox is checked, you must store the State or City ID in a variable (dictionary or list)
+   * if the checkbox is unchecked, you must remove the State or City ID from the variable
+   * update the `h4` tag inside the `div` Locations with the list of States or Cities checked
+* When the `button` tag is clicked, a new POST request to `places_search` should be made with the list of Amenities, Cities and States checked
 
+## 7. Reviews: [web_dynamic/101-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/101-hbnb.py), [web_dynamic/templates/101-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/101-hbnb.html), [web_dynamic/static/scripts/101-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/101-hbnb.js)
+Let’s add a new feature: show and hide reviews!
 
+Replace the route `100-hbnb` to `101-hbnb `in the file `101-hbnb.py` (based on `100-hbnb.py`)
 
+Create a new template `101-hbnb.html` (based on `100-hbnb.html`) and update it:
+* Import the JavaScript `static/scripts/101-hbnb.js` in the `<head>` tag (instead of `101-hbnb.js`)
+* Design the list of reviews from this [task 9. Full details](https://github.com/elyse502/AirBnB_clone/tree/master/web_static)
+* Add a `span` element at the right of the `H2` “Reviews” with value “show” (add all necessary attributes to do this feature)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Write a JavaScript script (`static/scripts/101-hbnb.js`):
+* Based on `100-hbnb.js`
+* When the `span` next to the Reviews `h2` is clicked by the user:
+   * Fetch, parse, display reviews and change the text to “hide”
+   * If the text is “hide”: remove all Review elements from the DOM
+   * This button should work like a toggle to fetch/display and hide reviews
 
 
