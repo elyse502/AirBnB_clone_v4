@@ -1,4 +1,4 @@
-# AirBnB Clone - The Console
+# 0x06. AirBnB clone - Web dynamic
 <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
 
 # AirBnB Clone: Phase # 4
@@ -14,7 +14,7 @@ The console is the first segment of the AirBnB project at Holberton School that 
 * Update attributes of an object
 * Destroy an object
 
-#Concepts
+# Concepts
 _For this project, we expect you to look at this concept:_
 * [AirBnB clone](https://intranet.alxswe.com/concepts/74)
 
