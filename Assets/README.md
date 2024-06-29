@@ -19,6 +19,10 @@ The console is the first segment of the AirBnB project at Holberton School that 
 _For this project, we expect you to look at this concept:_
 * [AirBnB clone](https://intranet.alxswe.com/concepts/74)
 
+<br />
+<details>
+    <summary>Click to show/hide Content</summary><br />
+   
 # 1. AirBnB clone
 
 ![65f4a1dd9c51265f49d0](https://github.com/elyse502/AirBnB_clone/assets/125453474/acf08a8b-f4e4-47b6-b32e-25d73c434b32)
@@ -264,6 +268,8 @@ print(date_now.strftime("%A %d %B %Y at %H:%M:%S")) # Thursday 08 June 2017 at 2
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><br><br>
 
+</details>
+
 # Resources🏗️
 ### Read or watch:
 * [Selector](https://jquery-tutorial.net/selectors/using-elements-ids-and-classes/)
@@ -336,6 +342,8 @@ It’s important in your project, to use the AirBnB API with the port `5001`
 
 ![hbnb_step5](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/246adcf0-fd6c-496a-ab6b-b243bfb31e4d)
 
+<br /><hr /><br />
+
 # Tasks 📃
 ## 0. Last clone!: [AirBnB_clone_v4](https://github.com/elyse502/AirBnB_clone_v4)
 A new codebase again? Yes!
@@ -348,6 +356,8 @@ For this project you will fork this [codebase](https://github.com/jzamora5/AirBn
    * Make it better!
 * If you’re the owner of this codebase, create a new repository called `AirBnB_clone_v4` and copy over all files from `AirBnB_clone_v3`
 * If you didn’t install Flasgger from the previous project, it’s time! `sudo pip3 install flasgger`
+
+---
 
 ## 1. Cash only: [0-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/0-hbnb.py), [templates/0-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/0-hbnb.html)
 Write a script that starts a Flask web application:
@@ -387,6 +397,8 @@ guillaume@ubuntu:~/AirBnB_v4$ curl -s -XGET http://0.0.0.0:5000/0-hbnb/ | head -
 guillaume@ubuntu:~/AirBnB_v4$
 ```
 
+---
+
 ## 2. Select some Amenities to be comfortable!: [1-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/1-hbnb.py), [templates/1-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/1-hbnb.html), [static/scripts/1-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/1-hbnb.js)
 For the moment the filters section is static, let’s make it dynamic!
 
@@ -414,6 +426,8 @@ As example:
 ![8e3c27078d62806b8ad1c1a682fbb3a48636ab89](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/806c3299-2b37-4bc9-8598-08276e21f904)
 ![4e5cecdd82a70f07cd283ef8e242ad325c95b564](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/49ad59c7-aa08-4b38-ad01-76908b513450)
 ![fb54e3081e229654db6e71ba919db753a791dcc3](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/e335bc44-6cad-494b-8662-ef92099bfdca)
+
+---
 
 ## 3. API status: [api/v1/app.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/api/v1/app.py), [web_dynamic/2-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/2-hbnb.py), [web_dynamic/templates/2-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/2-hbnb.html), [web_dynamic/static/styles/3-header.css](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/styles/3-header.css), [web_dynamic/static/scripts/2-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/2-hbnb.js)
 Before requesting the HBNB API, it’s better to know the status of this one.
@@ -449,6 +463,8 @@ guillaume@ubuntu:~/AirBnB_v4$ HBNB_MYSQL_USER=hbnb_dev HBNB_MYSQL_PWD=hbnb_dev_p
 ![b68cd1e385963da099899f51ee5f3a6bbf0adcb3](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/0635ec85-68ef-4d3c-a625-a243e9c01e53)
 ![62fbb2d674fca4a843458e61cf3b05ee9f68ad04](https://github.com/elyse502/AirBnB_clone_v4/assets/125453474/5fa02094-22da-43f7-8a41-0943e9c0e632)
 
+---
+
 ## 4. Fetch places: [web_dynamic/3-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/3-hbnb.py), [web_dynamic/templates/3-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/3-hbnb.html), [web_dynamic/static/scripts/3-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/3-hbnb.js)
 Replace the route `2-hbnb` with `3-hbnb` in the file `3-hbnb.py` (based on `2-hbnb.py`)
 
@@ -465,6 +481,8 @@ Write a JavaScript script (`static/scripts/3-hbnb.js`):
 
 The final result must be the same as previously, but now, places are loaded from the front-end, not from the back-end!
 
+---
+
 ## 5. Filter places by Amenity: [web_dynamic/4-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/4-hbnb.py), [web_dynamic/templates/4-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/4-hbnb.html), [web_dynamic/static/scripts/4-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/4-hbnb.js)
 Replace the route `3-hbnb` with `4-hbnb` in the file `4-hbnb.py` (based on `3-hbnb.py`)
 
@@ -476,6 +494,8 @@ Write a JavaScript script (`static/scripts/4-hbnb.js`):
 * When the `button` tag is clicked, a new POST request to `places_search` should be made with the list of Amenities checked
 
 Now you have the first filter implemented, enjoy!
+
+---
 
 ## 6. States and Cities: [web_dynamic/100-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/100-hbnb.py), [web_dynamic/templates/100-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/100-hbnb.html), [web_dynamic/static/scripts/100-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/100-hbnb.js)
 Now, reproduce the same steps with the State and City filter:
@@ -500,6 +520,8 @@ Write a JavaScript script (`static/scripts/100-hbnb.js`):
    * update the `h4` tag inside the `div` Locations with the list of States or Cities checked
 * When the `button` tag is clicked, a new POST request to `places_search` should be made with the list of Amenities, Cities and States checked
 
+---
+
 ## 7. Reviews: [web_dynamic/101-hbnb.py](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/101-hbnb.py), [web_dynamic/templates/101-hbnb.html](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/templates/101-hbnb.html), [web_dynamic/static/scripts/101-hbnb.js](https://github.com/elyse502/AirBnB_clone_v4/blob/master/web_dynamic/static/scripts/101-hbnb.js)
 Let’s add a new feature: show and hide reviews!
 
@@ -516,5 +538,7 @@ Write a JavaScript script (`static/scripts/101-hbnb.js`):
    * Fetch, parse, display reviews and change the text to “hide”
    * If the text is “hide”: remove all Review elements from the DOM
    * This button should work like a toggle to fetch/display and hide reviews
+
+
 
 
